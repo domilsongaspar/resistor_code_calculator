@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#040028">
+    <title>Calcular valor de resistor pelo código de cor</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script defer src="./js/app.js"></script>
+</head>
+<body>
+    <header class="header">
+        <span>
+            Resistor Code Calculator
+        </span>
+    </header>
+
+    <section class="main">
+        <main>
+            <div class="resistor_img">
+                <figure id="resistor_3r">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <!-- Creator: CorelDRAW 2019 (64 Bit Versão de avaliação) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="150px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 300 150"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        <style type="text/css">                           
+                        .str0 {stroke:black;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .str1 {stroke:#666666;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .fil2 {fill:none}
+                        .fil0 {fill:#C9C95D}
+                        .fil1 {fill:#CCCCCC}                           
+                        </style>
+                        </defs>
+                        <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <g id="_2061007959440">
+                        <path class="fil0 str0" d="M217.108 35.5c6.527,0 12.172,9.004 14.871,22.086l1.693 0 0 17.414 0 17.414 -1.694 0c-2.699,13.082 -8.343,22.086 -14.87,22.086 -6.527,0 -12.171,-9.004 -14.87,-22.086l-104.475 0c-2.7,13.082 -8.344,22.086 -14.87,22.086 -6.528,0 -12.171,-9.004 -14.871,-22.086l-1.694 0 0 -17.414 0 -17.414 1.694 0c2.699,-13.082 8.343,-22.086 14.871,-22.086 6.526,0 12.171,9.004 14.87,22.086l104.475 0c2.699,-13.082 8.343,-22.086 14.87,-22.086z"/>
+                        <path class="fil1 str1" d="M6.016 67.779l60.312 0 0 15.078 -60.312 0c-2.335,0 -4.246,-1.91 -4.246,-4.247l0 -6.584c0,-2.336 1.911,-4.247 4.246,-4.247z"/>
+                        <path class="fil1 str1" d="M233.672 67.779l60.312 0c2.336,0 4.247,1.911 4.247,4.247l0 6.584c0,2.337 -1.911,4.247 -4.247,4.247l-60.312 0 0 -15.078z"/>
+                        </g>
+                        <rect class="ring1 fil2 str0" x="125.313" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring2 fil2 str0" x="147.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring3 fil2 str0" x="168.5" y="57.586" width="8" height="34.828"/>
+                        </g>
+                    </svg>
+                </figure>
+
+                <figure class="hidden" id="resistor_4r">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <!-- Creator: CorelDRAW 2019 (64 Bit Versão de avaliação) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="150px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 300 150"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        <style type="text/css">
+                        .str0 {stroke:black;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .str1 {stroke:#666666;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .fil2 {fill:none}
+                        .fil0 {fill:#C9C95D}
+                        .fil1 {fill:#CCCCCC}
+                        </style>
+                        </defs>
+                        <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <g id="_2026473822080">
+                        <path class="fil0 str0" d="M217.108 35.5c6.527,0 12.172,9.004 14.871,22.086l1.693 0 0 17.414 0 17.414 -1.694 0c-2.699,13.082 -8.343,22.086 -14.87,22.086 -6.527,0 -12.171,-9.004 -14.87,-22.086l-104.475 0c-2.7,13.082 -8.344,22.086 -14.87,22.086 -6.528,0 -12.171,-9.004 -14.871,-22.086l-1.694 0 0 -17.414 0 -17.414 1.694 0c2.699,-13.082 8.343,-22.086 14.871,-22.086 6.526,0 12.171,9.004 14.87,22.086l104.475 0c2.699,-13.082 8.343,-22.086 14.87,-22.086z"/>
+                        <path class="fil1 str1" d="M6.016 67.779l60.312 0 0 15.078 -60.312 0c-2.335,0 -4.246,-1.91 -4.246,-4.247l0 -6.584c0,-2.336 1.911,-4.247 4.246,-4.247z"/>
+                        <path class="fil1 str1" d="M233.672 67.779l60.312 0c2.336,0 4.247,1.911 4.247,4.247l0 6.584c0,2.337 -1.911,4.247 -4.247,4.247l-60.312 0 0 -15.078z"/>
+                        </g>
+                        <rect class="ring1 fil2 str0" x="111.313" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring2 fil2 str0" x="133.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring3 fil2 str0" x="154.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring4 fil2 str0" x="188.5" y="57.586" width="8" height="34.828"/>
+                        </g>
+                    </svg>
+                </figure>
+                <figure class="hidden" id="resistor_5r">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <!-- Creator: CorelDRAW 2019 (64 Bit Versão de avaliação) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="150px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 300 150"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        <style type="text/css">
+                        .str0 {stroke:black;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .str1 {stroke:#666666;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .fil2 {fill:none}
+                        .fil0 {fill:#C9C95D}
+                        .fil1 {fill:#CCCCCC}
+                        </style>
+                        </defs>
+                        <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <g id="_2061009142096">
+                        <path class="fil0 str0" d="M217.108 35.5c6.527,0 12.172,9.004 14.871,22.086l1.693 0 0 17.414 0 17.414 -1.694 0c-2.699,13.082 -8.343,22.086 -14.87,22.086 -6.527,0 -12.171,-9.004 -14.87,-22.086l-104.475 0c-2.7,13.082 -8.344,22.086 -14.87,22.086 -6.528,0 -12.171,-9.004 -14.871,-22.086l-1.694 0 0 -17.414 0 -17.414 1.694 0c2.699,-13.082 8.343,-22.086 14.871,-22.086 6.526,0 12.171,9.004 14.87,22.086l104.475 0c2.699,-13.082 8.343,-22.086 14.87,-22.086z"/>
+                        <path class="fil1 str1" d="M6.016 67.779l60.312 0 0 15.078 -60.312 0c-2.335,0 -4.246,-1.91 -4.246,-4.247l0 -6.584c0,-2.336 1.911,-4.247 4.246,-4.247z"/>
+                        <path class="fil1 str1" d="M233.672 67.779l60.312 0c2.336,0 4.247,1.911 4.247,4.247l0 6.584c0,2.337 -1.911,4.247 -4.247,4.247l-60.312 0 0 -15.078z"/>
+                        </g>
+                        <rect class="ring1 fil2 str0" x="106.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring2 fil2 str0" x="125.686" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring3 fil2 str0" x="143.686" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring5 fil2 str0" x="188.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring4 fil2 str0" x="161.686" y="57.586" width="8" height="34.828"/>
+                        </g>
+                    </svg>
+                </figure>
+                <figure class="hidden" id="resistor_6r">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <!-- Creator: CorelDRAW 2019 (64 Bit Versão de avaliação) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="150px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                    viewBox="0 0 300 150"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                        <style type="text/css">
+                        .str0 {stroke:black;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .str1 {stroke:#666666;stroke-width:0.756;stroke-miterlimit:22.9256}
+                        .fil2 {fill:none}
+                        .fil0 {fill:#C9C95D}
+                        .fil1 {fill:#CCCCCC}
+                        </style>
+                        </defs>
+                        <g id="Camada_x0020_1">
+                        <metadata id="CorelCorpID_0Corel-Layer"/>
+                        <g id="_2061019121648">
+                        <path class="fil0 str0" d="M217.108 35.5c6.527,0 12.172,9.004 14.871,22.086l1.693 0 0 17.414 0 17.414 -1.694 0c-2.699,13.082 -8.343,22.086 -14.87,22.086 -6.527,0 -12.171,-9.004 -14.87,-22.086l-104.475 0c-2.7,13.082 -8.344,22.086 -14.87,22.086 -6.528,0 -12.171,-9.004 -14.871,-22.086l-1.694 0 0 -17.414 0 -17.414 1.694 0c2.699,-13.082 8.343,-22.086 14.871,-22.086 6.526,0 12.171,9.004 14.87,22.086l104.475 0c2.699,-13.082 8.343,-22.086 14.87,-22.086z"/>
+                        <path class="fil1 str1" d="M6.016 67.779l60.312 0 0 15.078 -60.312 0c-2.335,0 -4.246,-1.91 -4.246,-4.247l0 -6.584c0,-2.336 1.911,-4.247 4.246,-4.247z"/>
+                        <path class="fil1 str1" d="M233.672 67.779l60.312 0c2.336,0 4.247,1.911 4.247,4.247l0 6.584c0,2.337 -1.911,4.247 -4.247,4.247l-60.312 0 0 -15.078z"/>
+                        </g>
+                        <rect class="ring1 fil2 str0" x="79" y="35.999" width="8" height="78" rx="1.5" ry="3.36"/>
+                        <rect class="ring6 fil2 str0" x="213" y="35.999" width="8" height="78" rx="1.5" ry="3.36"/>
+                        <rect class="ring3 fil2 str0" x="135.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring4 fil2 str0" x="155.5" y="57.586" width="8" height="34.828"/>
+                        <rect class="ring2 fil2 str0" x="115.5" y="57.672" width="8" height="34.828"/>
+                        <rect class="ring5 fil2 str0" x="175.5" y="57.586" width="8" height="34.828"/>
+                        </g>
+                    </svg>
+                </figure>
+            </div>
+            <div class="colours">
+                <div id="threeRings">
+                    <div>
+                        <label for="ring1">1º Anel:</label>
+                        <select name="r1" id="ring1" class="ring">
+                            <option value="0">Preto</option>
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="3">Laranja</option>
+                            <option value="4">Amarelo</option>
+                            <option value="5">Verde</option>
+                            <option value="6">Azul</option>
+                            <option value="7">Violeta</option>
+                            <option value="8">Cinza</option>
+                            <option value="9">Branco</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ring2">2º Anel:</label>
+                        <select name="r2" id="ring2" class="ring">
+                            <option value="0">Preto</option>
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="3">Laranja</option>
+                            <option value="4">Amarelo</option>
+                            <option value="5">Verde</option>
+                            <option value="6">Azul</option>
+                            <option value="7">Violeta</option>
+                            <option value="8">Cinza</option>
+                            <option value="9">Branco</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ring3">3º Anel:</label>
+                        <select name="r3" id="ring3" class="ring">
+                            <option value="0">Preto</option>
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="3">Laranja</option>
+                            <option value="4">Amarelo</option>
+                            <option value="5">Verde</option>
+                            <option value="6">Azul</option>
+                            <option value="7">Violeta</option>
+                            <option value="8">Cinza</option>
+                            <option value="9">Branco</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control hidden" id="fourRings">
+                    <div class="relative">
+                        <label for="g1_extra_ring4" class="lb_tol">4º Anel</label>
+                        <select title="Cor do anel" id="g1_extra_ring4" name="tol" class="tol ring">
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="0.5">Verde</option>
+                            <option value="0.25">Azul</option>
+                            <option value="0.1">Violeta</option>
+                            <option value="5">Dourado</option>
+                            <option value="10">Prateado</option>
+                        </select>
+                        <i class="fa fa-minus absolute out-right remove"></i>
+                    </div>
+                </div>
+                <div class="control hidden" id="fiveRings">
+                    <div>
+                        <label for="g2_extra_ring4">4º Anel:</label>
+                        <div>
+                            <select title="Cor do anel" id="g2_extra_ring4" name="rx" class="rx ring">
+                                <option value="0">Preto</option>
+                                <option value="1">Castanho</option>
+                                <option value="2">Vermelho</option>
+                                <option value="3">Laranja</option>
+                                <option value="4">Amarelo</option>
+                                <option value="5">Verde</option>
+                                <option value="6">Azul</option>
+                                <option value="7">Violeta</option>
+                                <option value="8">Cinza</option>
+                                <option value="9">Branco</option>
+                                <option value="0.1">Dourado</option>
+                                <option value="0.01">Prateado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <label for="g2_extra_ring5" class="lb_tol">5º Anel</label>
+                        <select title="Cor do anel" id="g2_extra_ring5" name="tol" class="tol ring">
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="0.5">Verde</option>
+                            <option value="0.25">Azul</option>
+                            <option value="0.1">Violeta</option>
+                            <option value="5">Dourado</option>
+                            <option value="10">Prateado</option>
+                        </select>
+                        <i class="fa fa-minus absolute out-right remove"></i>
+                    </div>
+                </div>
+                <div class="control hidden" id="sixRings">
+                    <div>
+                        <label for="g3_extra_ring4">4º Anel</label>
+                        <div>
+                            <select title="Cor do anel" id="g3_extra_ring4" name="rx" class="rx ring">
+                                <option value="0">Preto</option>
+                                <option value="1">Castanho</option>
+                                <option value="2">Vermelho</option>
+                                <option value="3">Laranja</option>
+                                <option value="4">Amarelo</option>
+                                <option value="5">Verde</option>
+                                <option value="6">Azul</option>
+                                <option value="7">Violeta</option>
+                                <option value="8">Cinza</option>
+                                <option value="9">Branco</option>                                
+                                <option value="0.1">Dourado</option>
+                                <option value="0.01">Prateado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="g3_extra_ring5" class="lb_tol">5º Anel</label>
+                        <select title="Cor do anel" id="g3_extra_ring5" name="tol" class="tol ring">
+                            <option value="1">Castanho</option>
+                            <option value="2">Vermelho</option>
+                            <option value="0.5">Verde</option>
+                            <option value="0.25">Azul</option>
+                            <option value="0.1">Violeta</option>
+                            <option value="0.05">Cinza</option>
+                            <option value="5">Dourado</option>
+                            <option value="10">Prateado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="ppm">6º Anel:</label>
+                        <div class="relative">
+                            <select title="Cor do anel" name="rx" class="rx ring" id="ppm">
+                                <option value="250">Preto</option>
+                                <option value="100">Castanho</option>
+                                <option value="50">Vermelho</option>
+                                <option value="15">Laranja</option>
+                                <option value="25">Amarelo</option>
+                                <option value="20">Verde</option>
+                                <option value="10">Azul</option>
+                                <option value="5">Violeta</option>
+                                <option value="1">Cinza</option>
+                            </select>
+                            <i class="fa fa-minus absolute out-right remove"></i>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="buttons">
+                    <button type="button" class="btnAction" id="run">Calcular</button>
+                    <button type="button" class="btnAction" id="moreRing">Adicionar anel</button>
+                </div>
+            </div>
+
+            <div class="result hidden" id="result"></div>
+        </main>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2022. Developed by Domilson Gaspar</p>
+    </footer>
+</body>
+</html>

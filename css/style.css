@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Roboto', "Helvetica";
+    outline: none;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.header,
+.footer {
+    background-color: #000;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 1.6rem;
+    text-align: center;
+    width: 100%;
+}
+
+.header span {
+    font-weight: bold;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+    padding: 1em 0;
+}
+
+.main label {
+    display: block;
+    margin: .6rem 0;
+    font-weight: bold;
+}
+
+.main input,
+.main select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+}
+
+.main select:hover {
+    cursor: pointer;
+}
+
+.main select ,
+.main select option {
+    font-weight: bold;
+}
+
+.resistor_img {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rings,
+.colours {
+    width: 70%;
+    margin: auto;
+}
+
+.rings input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.colours .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.colours .btnAction {
+    margin: 1rem 0;
+    width: 45%;
+    padding: .5rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 0.25em;    
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.colours .btnAction:hover {
+    background-color: #0750be;
+    border: 1px solid transparent;
+    color: #fff;
+    transition: 400ms;
+}
+
+.result {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Utility classes */
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.out-right {
+    right: -1.5rem;
+}
+
+.remove {
+    color: tomato;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (min-width: 640px) {
+    .main {
+        width: 62.5%;
+    }
+
+    .resistor_img,
+    .rings,
+    .colours {
+        width: 60%;
+    }
+
+    .colours .buttons {
+        justify-content: space-between;
+    }
+}
