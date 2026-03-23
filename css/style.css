@@ -12,18 +12,19 @@ svg {
     height: auto;
 }
 
-.header,
-.footer {
+.header {
     background-color: #000;
-    box-sizing: border-box;
     color: #fff;
     padding: 1.6rem;
     text-align: center;
-    width: 100%;
 }
 
 .header span {
     font-weight: bold;
+}
+
+.header span sub {
+    color: #ccc;
 }
 
 .main {
@@ -50,7 +51,7 @@ svg {
     cursor: pointer;
 }
 
-.main select ,
+.main select,
 .main select option {
     font-weight: bold;
 }
@@ -84,7 +85,7 @@ svg {
     padding: .5rem;
     border: 1px solid #ccc;
     background-color: #fff;
-    border-radius: 0.25em;    
+    border-radius: 0.25em;
     cursor: pointer;
     transition: 400ms;
 }
@@ -96,13 +97,19 @@ svg {
     transition: 400ms;
 }
 
-.result {
+.result,
+.calc {
     text-align: center;
     margin-top: 1rem;
     font-weight: bold;
 }
 
-/* Utility classes */
+.calc {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+/* Global classes */
 .hidden {
     display: none;
 }
