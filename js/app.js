@@ -1,12 +1,12 @@
 'use strict';
 
 var run, addRing, removeRing, nRings = 3, container,
-inputs = ['r1', 'r2', 'r3', 'rx'], rValues = [], rTol, resistence, result,
-ab, abc, c, d, e, t, ppm;
+    inputs = ['r1', 'r2', 'r3', 'rx'], rValues = [], rTol, resistence, result,
+    ab, abc, c, d, e, t, ppm;
 
 const mxRings = 7, base = 10;
 
-( function () {
+(function () {
     setRingColours();
     result = document.getElementById('result');
     run = document.getElementById('run');
@@ -18,10 +18,10 @@ const mxRings = 7, base = 10;
     });
 
     //Start the calc
-    run.onclick = function () {        
+    run.onclick = function () {
         rValues = getRingsValue(inputs, nRings);
         rTol = getTolerenceValue(nRings);
-        
+
         //Get the values for the calc
         ab = rValues[0] + rValues[1];
         ab = Number.parseInt(ab);
@@ -33,7 +33,7 @@ const mxRings = 7, base = 10;
             case 4:
                 resistence = passTo(ab * Math.pow(base, c)) + switchMultiple(ab * Math.pow(base, c)) + t;
                 break;
-            case 5:                
+            case 5:
                 abc = Number.parseInt(ab + rValues[2]);
                 resistence = passTo(abc * Math.pow(base, d)) + switchMultiple(abc * Math.pow(base, d)) + t;
                 break;
@@ -53,7 +53,7 @@ const mxRings = 7, base = 10;
                 resistence = passTo(ab * Math.pow(base, c)) + switchMultiple(ab * Math.pow(base, c)) + ' &plusmn20' + '\%';
         }
 
-        result.innerHTML = `<span>Resultado: ${resistence}</span>`;
+        result.innerHTML = `<span>${resistence}</span>`;
         result.classList.remove('hidden');
     }
 
@@ -61,28 +61,28 @@ const mxRings = 7, base = 10;
     addRing.onclick = function () {
         let resistorVisible = document.querySelector('.resistor_img');
         if ((nRings + 1) < mxRings) nRings++;
-            setArea(nRings);
-            setRingColours();
-            
-            if (nRings - 3 < 4) {
-                resistorVisible.children[nRings-4].classList.add('hidden');
-                resistorVisible.children[nRings-3].classList.remove('hidden');
-            }
+        setArea(nRings);
+        setRingColours();
 
-            removeRing = document.querySelectorAll('.remove');
-            removeRing.forEach( (el) => {
-                el.onclick = function () {
-                    setArea(--nRings);
-                    if (nRings - 2 < 4) {
-                        resistorVisible.children[nRings-2].classList.add('hidden');
-                        resistorVisible.children[nRings-3].classList.remove('hidden');
-                    }
+        if (nRings - 3 < 4) {
+            resistorVisible.children[nRings - 4].classList.add('hidden');
+            resistorVisible.children[nRings - 3].classList.remove('hidden');
+        }
+
+        removeRing = document.querySelectorAll('.remove');
+        removeRing.forEach((el) => {
+            el.onclick = function () {
+                setArea(--nRings);
+                if (nRings - 2 < 4) {
+                    resistorVisible.children[nRings - 2].classList.add('hidden');
+                    resistorVisible.children[nRings - 3].classList.remove('hidden');
                 }
-            });
+            }
+        });
     }
 })();
 
-function setArea (qRings) {
+function setArea(qRings) {
     container = document.querySelectorAll('.control');
     switch (qRings) {
         case 3:
@@ -103,8 +103,8 @@ function setArea (qRings) {
     }
 }
 
-function setHidden (...hiddens) {
-    hiddens.forEach( (container) => {
+function setHidden(...hiddens) {
+    hiddens.forEach((container) => {
         if (!container.classList.contains('hidden')) {
             container.classList.add('hidden');
         }
@@ -117,7 +117,7 @@ function setHidden (...hiddens) {
  * @returns array
  */
 
-function getRingsValue (rings, qtd) {
+function getRingsValue(rings, qtd) {
     let values = [];
 
     for (let c = 0; c < 3; c++) {
@@ -142,7 +142,7 @@ function getRingsValue (rings, qtd) {
     return values;
 }
 
-function getRingsText (qtd) {
+function getRingsText(qtd) {
     let elems = [], values = [], query = '#threeRings .ring';
 
     elems = document.querySelectorAll(query);
@@ -152,7 +152,7 @@ function getRingsText (qtd) {
                 values.push(i.textContent);
             }
         }
-    });    
+    });
 
     switch (qtd) {
         case 4:
@@ -167,23 +167,23 @@ function getRingsText (qtd) {
             query = '#sixRings .ring';
             queryChanges(query, values);
             break;
-    }       
+    }
 
     return values;
 }
 
-function queryChanges (query, values) {
+function queryChanges(query, values) {
     let elems = document.querySelectorAll(query);
     elems.forEach((el) => {
         for (let i of el.children) {
             if (el.value == i.value) {
                 values.push(i.textContent);
             }
-        }            
+        }
     });
 }
 
-function getTolerenceValue (qRings) {
+function getTolerenceValue(qRings) {
     let tol = '';
     switch (qRings) {
         case 4:
@@ -200,10 +200,10 @@ function getTolerenceValue (qRings) {
     return tol;
 }
 
-function setRingColours () {
-    let colourValues = getRingsText(nRings);    
+function setRingColours() {
+    let colourValues = getRingsText(nRings);
     let colours = {
-        "Preto":"#000000",
+        "Preto": "#000000",
         "Castanho": "#a52a2a",
         "Vermelho": "#ff0000",
         "Laranja": "#ff9800",
@@ -215,59 +215,20 @@ function setRingColours () {
         "Branco": "#ffffff",
         "Dourado": "#f5d006",
         "Prateado": "#c0c0c0"
-    },
-    bars = [],
-    barColours = [];
+    };
 
-    for (let i in colourValues) {
-        barColours.push(colours[colourValues[i]]);
-    }
+    let barColours = colourValues.map(val => colours[val] || "#000000");
 
-    switch (nRings) {
-        case 3:
-            for (let i = 1; i < nRings+1; i++) {
-                bars[i-1] = document.querySelector('#resistor_3r rect.ring'+i);
-            }
-
-            for (let i = 0; i < bars.length; i++) {
-                bars[i].style.fill = barColours[i];
-            }
-            break;
-        case 4:
-                for (let i = 1; i < nRings+1; i++) {
-                    bars[i-1] = document.querySelector('#resistor_4r rect.ring'+i);
-                }
-    
-                for (let i = 0; i < bars.length; i++) {
-                    bars[i].style.fill = barColours[i];
-                }
-            break;
-        case 5:
-                for (let i = 1; i < nRings+1; i++) {
-                    bars[i-1] = document.querySelector('#resistor_5r rect.ring'+i);
-                }
-                
-                for (let i = 0; i < bars.length; i++) {
-                    bars[i].style.fill = barColours[i];
-                }
-            break;
-        case 6:
-                for (let i = 1; i < nRings+1; i++) {
-                    bars[i-1] = document.querySelector('#resistor_6r rect.ring'+i);
-                }
-    
-                for (let i = 0; i < bars.length; i++) {
-                    bars[i].style.fill = barColours[i];
-                }
-            break;
-    }
-
-    for (let j = 0; j < barColours.length; j++) {
-        bars[j].style.fill = barColours[j];
+    for (let i = 1; i <= nRings; i++) {
+        let bar = document.querySelector(`#resistor_${nRings}r rect.ring${i}`);
+        if (bar) {
+            bar.style.fill = barColours[i - 1];
+            bar.style.transition = 'fill 0.4s ease';
+        }
     }
 }
 
-function switchMultiple (value) {
+function switchMultiple(value) {
     if (value >= Math.pow(10, 3) && value < Math.pow(10, 6)) {
         return 'K&#x3A9';
     } else if (value >= Math.pow(10, 6) && value < Math.pow(10, 9)) {
@@ -279,7 +240,7 @@ function switchMultiple (value) {
     return '&#x3A9';
 }
 
-function passTo (value) {
+function passTo(value) {
     if (value >= Math.pow(10, 3) && value < Math.pow(10, 6)) {
         return passToKilo(value);
     } else if (value >= Math.pow(10, 6) && value < Math.pow(10, 9)) {
@@ -291,14 +252,14 @@ function passTo (value) {
     return value;
 }
 
-function passToKilo (value) {
+function passToKilo(value) {
     return value / Math.pow(10, 3);
 }
 
-function passToMega (value) {
+function passToMega(value) {
     return value / Math.pow(10, 6);
 }
 
-function passToGiga (value) {
+function passToGiga(value) {
     return value / Math.pow(10, 9);
 }
